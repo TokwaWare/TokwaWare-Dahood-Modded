@@ -248,6 +248,15 @@ Tab3:Slider("Fov Camera",80,200,function(text)
     workspace.CurrentCamera.FieldOfView = (text)
 end)
 
+Tab3:Button("Inf Jump",function(bool)
+    local InfiniteJumpEnabled = true
+game:GetService("UserInputService").JumpRequest:connect(function()
+	if InfiniteJumpEnabled then
+		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+	end
+end)
+end)
+
 Tab3:Button("Tryhard Anims",function(bool)
     while true do
         wait(1)
