@@ -200,10 +200,11 @@ Tab1:Dropdown("AimPart",{"UpperTorso","LowerTorso"},function(value)
     getgenv().AimPart = value
 end)
 
+local Tab2 = Window:Tab("Silent Aim",false)
 
-Tab1:Label("Silent Aim")
+Tab2:Label("Silent Aim")
 
-Tab1:Button("Silent Aim (C)",function(bool)
+Tab2:Button("Silent Aim (C)",function(bool)
     getgenv().Prediction =  (  .18  )   
 
 getgenv().FOV =  (  350  )   
